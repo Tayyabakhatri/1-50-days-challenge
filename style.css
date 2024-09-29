@@ -1,3 +1,18 @@
-.bowes{
-    background-image: url(images/stock-photo-the-young-and-conceptual-image-of-a-large-stone-in-the-shape-of-the-human-brain-1032541603.jpg);
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.magic {
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgb(62, 52, 146);
+    border-radius: 10px;
+    box-shadow: 3px 3px rgba(128, 128, 128, 0.397);
+}
+.magic:active{
+    transform: translateY(2px);
 }
