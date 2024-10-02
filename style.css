@@ -1,7 +1,14 @@
+
+*{
+    box-sizing: border-box;
+}
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .magic {
@@ -12,7 +19,69 @@ body {
     background-color: rgb(62, 52, 146);
     border-radius: 10px;
     box-shadow: 3px 3px rgba(128, 128, 128, 0.397);
+    margin: 20px;
 }
-.magic:active{
+
+.magic:active {
     transform: translateY(2px);
+}
+
+.box {
+    width: 600px;
+    height: 600px;
+    border: 2px solid black;
+    position: relative;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.boxes.big {
+    height: 600px;
+    width: 600px;
+}
+
+.boxes.big .box {
+    transform: rotateZ(360deg);
+}
+
+.box {
+    background-image: url("images/gallery.jpg.jpg");
+    background-repeat: no-repeat;
+    /* background-size: 500px 500px; */
+    background-size: 200px 200px;
+    position: relative;
+    height: 125px;
+    width: 125px;
+    transition: 0.4s ease;
+}
+
+.box::after {
+    content: "";
+    /* background-color: aqua; */
+    position: absolute;
+    top: 8px;
+    right: -15px;
+    height: 15px;
+    width: 100%;
+    transform: skewY(45deg);
+    border: none;
+}
+
+.box::before {
+    content: '';
+    background-color: rgba(128, 128, 128, 0.699);
+    position: absolute;
+    bottom: -15px;
+    left: 8px;
+    height: 15px;
+    width: 100%;
+    transform: skewX(45deg);
 }
